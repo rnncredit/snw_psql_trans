@@ -1,0 +1,24 @@
+config:
+  partial_parse: true
+  printer_width: 120
+  send_anonymous_usage_stats: false
+  use_colors: true
+normalize:
+  outputs:
+    prod:
+      account: jab31692.us-east-1
+      client_session_keep_alive: false
+      connect_retries: 3
+      connect_timeout: 15
+      database: ORBIT_DATABASE
+      password: Orb1t!@#
+      query_tag: normalization
+      retry_all: true
+      retry_on_database_errors: true
+      role: ORBIT_ROLE
+      schema: ORBIT_SCHEMA
+      threads: 5
+      type: snowflake
+      user: ORBIT_USER
+      warehouse: ORBIT_WAREHOUSE
+  target: prod
