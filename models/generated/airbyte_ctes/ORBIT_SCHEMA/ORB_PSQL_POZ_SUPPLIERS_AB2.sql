@@ -230,7 +230,7 @@ select
     ,
     cast(CREATED_BY_REST_FLAG as {{ dbt_utils.type_string() }}) as CREATED_BY_REST_FLAG,
     cast(DF_CORPORATE_WEBSITE as {{ dbt_utils.type_string() }}) as DF_CORPORATE_WEBSITE,
-    cast(case DF_LINKED_ADDRESS_ID when '' then 0 else DF_LINKED_ADDRESS_ID end as {{ dbt_utils.type_float() }}) as DF_LINKED_ADDRESS_ID,
+    cast(TRY_TO_NUMBER(DF_LINKED_ADDRESS_ID) as {{ dbt_utils.type_float() }}) as DF_LINKED_ADDRESS_ID,
     cast(SUPPLIER_LOCKED_FLAG as {{ dbt_utils.type_string() }}) as SUPPLIER_LOCKED_FLAG,
     cast(VAT_REGISTRATION_NUM as {{ dbt_utils.type_string() }}) as VAT_REGISTRATION_NUM,
     case
